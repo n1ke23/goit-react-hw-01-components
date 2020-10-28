@@ -1,18 +1,19 @@
 import React from 'react';
 import Status from '../Status/Status';
+import PropTypes from 'prop-types';
 
 
 const Profile = ({ user }) => {
   console.log(user);
-  // console.log(user.stats);
+  // console.log(user.stats);     
   return (
-
+    <>
     <div className="profile">
       <div className="description">
         <img
           src={user.avatar}
           alt="user avatar"
-          class="avatar"
+          className="avatar"
         />
         <p className="name">{user.name}</p>
         <p className="tag">{user.tag}</p>
@@ -21,8 +22,8 @@ const Profile = ({ user }) => {
 
       <ul className="stats">
 
-        {/* <Stats obj={user.stats} /> */}
-
+      {Object.entries(user.stats).map(elem => <Status key={elem[0]} label={elem[0]}  quantity={elem[1]} />) }
+{/* 
         <li>
           <span class="label">Followers</span>
           <span class="quantity">1000</span>
@@ -34,12 +35,16 @@ const Profile = ({ user }) => {
         <li>
           <span class="label">Likes</span>
           <span class="quantity">3000</span>
-        </li>
+        </li> */}
 
       </ul>
     </div>
-
+    </>
   );
 };
 
 export default Profile;
+
+Profile.propTypes = {
+  user: PropTypes.object
+}
