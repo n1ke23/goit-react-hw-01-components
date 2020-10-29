@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './TableItem.css';
 
 const TableItem = ({type, amount, currency}) => {
   return (
-  <tr>
+  <tr className='transaction-item'>
     <td>{type}</td>
     <td>{amount}</td>
     <td>{currency}</td>

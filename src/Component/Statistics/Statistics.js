@@ -3,6 +3,8 @@ import Status from '../Status/Status';
 import Title from './../Title/Title';
 import Stats from './../Stats/Stats';
 import PropTypes from 'prop-types';
+import './Statistics.css';
+
 const Statistics = ({stat}) => {
 
   return (

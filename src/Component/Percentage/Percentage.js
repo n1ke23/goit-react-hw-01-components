@@ -1,12 +1,12 @@
 import React from 'react';
-import './Percentage.css'
 import PropTypes from 'prop-types';
+import './Percentage.css';
 
 const Percentage = ({avatar, name, isOnline}) => {
   return (
-    <li className="item">
-      <span className={ isOnline ? 'green' : 'red'}>&#8226;</span>
-      <img className={avatar} src="" alt="" width="48" />
+    <li className="item-percentage">
+      <span className={ isOnline ? 'green span' : 'red span'}>&#8226;</span>
+      <img className="img" src={avatar} alt="social img" width="48" />
   <p className="name">{name}</p>
     </li>
   ); 

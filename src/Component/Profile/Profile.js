@@ -1,11 +1,11 @@
 import React from 'react';
 import Status from '../Status/Status';
 import PropTypes from 'prop-types';
-
+import './Profile.css';
 
 const Profile = ({ user }) => {
   console.log(user);
-  // console.log(user.stats);     
+
   return (
     <>
     <div className="profile">
@@ -23,19 +23,7 @@ const Profile = ({ user }) => {
       <ul className="stats">
 
       {Object.entries(user.stats).map(elem => <Status key={elem[0]} label={elem[0]}  quantity={elem[1]} />) }
-{/* 
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
-        </li> */}
+
 
       </ul>
     </div>
