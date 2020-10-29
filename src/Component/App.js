@@ -2,7 +2,7 @@ import Profile from './Profile/Profile';
 import users from '../data/user.json';
 import Statistics from './Statistics/Statistics';
 import statistical from '../data/statistical-data.json'
-import Percentage from './Percentage/Percentage';
+import FriendList from './FriendList/FriendList'
 import friends from '../data/friends.json';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 import trans from '../data/transactions.json';
@@ -14,7 +14,7 @@ function App() {
     <>
       <Profile user={users} />
       <Statistics stat={statistical}/>
-      {friends.map(elem => <Percentage key={elem.id} avatar={elem.avatar} name={elem.name} isOnline={elem.isOnline} />)}
+      <FriendList friends={friends}/>
       <TransactionHistory trans={trans}/>
     </>
   );
